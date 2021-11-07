@@ -28,19 +28,19 @@ pipeline{
                }
                
             }
-          // stage('PUSH image to Docker Hub')
-          //   {
+          stage('PUSH image to Docker Hub')
+            {
              
 
-          //     steps{
-          //         sh 'docker login -u "rohitnaikade264" -p "Ro-Hitman.45" docker.io'
+              steps{
+                  sh 'docker login -u "rohitnaikade264" -p "Ro-Hitman.45" docker.io'
 
-          //         sh 'docker push rohitnaikade264/onlineShop'
-          //     }
+                  sh 'docker push rohitnaikade264/onlineShop'
+              }
               
             
           
-          //   }
+            }
     }
     
 }
