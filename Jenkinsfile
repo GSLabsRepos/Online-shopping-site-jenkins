@@ -1,13 +1,5 @@
 pipeline{
 
-
-    agent {
-        any {
-            image 'ubuntu'
-            args '-u root:sudo -v $HOME/workspace/onlineShopping'
-        }
-    }
-
     stages{
 
           stage('SCM Checkout')
@@ -24,8 +16,8 @@ pipeline{
 
                steps{
                    sh 'pwd'
-                   sh 'sudo chown root:jenkins docker-compose build .'
-                   sh 'sudo chown root:jenkins docker-compose up -d'
+                   sh 'docker-compose build .'
+                   sh 'docker-compose up -d'
                }
                
             }
