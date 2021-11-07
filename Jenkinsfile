@@ -2,7 +2,7 @@ pipeline{
 
 
     agent {
-        docker {
+        any {
             image 'ubuntu'
             args '-u root:sudo -v $HOME/workspace/onlineShopping'
         }
