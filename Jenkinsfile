@@ -35,7 +35,7 @@ pipeline{
               steps{
                   sh 'docker login -u "rohitnaikade264" -p "Ro-Hitman.45" docker.io'
 
-                  sh 'docker push rohitnaikade264/online-shop'
+                  sh 'docker push rohitnaikade264/onlineshopping_web'
               }
               
             
