@@ -1,5 +1,12 @@
 pipeline{
 
+
+    agent {
+        any {
+            image 'ubuntu'
+        }
+    }
+
     stages{
 
           stage('SCM Checkout')
