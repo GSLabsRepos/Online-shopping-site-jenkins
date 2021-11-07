@@ -34,8 +34,8 @@ pipeline{
 
               steps{
                   sh 'docker login -u "rohitnaikade264" -p "Ro-Hitman.45" docker.io'
-                  sh 'docker images'
                   sh 'docker tag onlineshopping_web:latest rohitnaikade264/online-shopping'
+                  sh 'docker images'
                   sh 'docker push rohitnaikade264/onlineshopping_web:latest'
               }
               
