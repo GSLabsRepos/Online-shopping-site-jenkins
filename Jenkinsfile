@@ -1,9 +1,9 @@
 node{
 
-    // stage('SCM Checkout')
-    // {
-    //     git credentialsId: '4cc785e9-441d-4818-a248-2bfb2148004d', url: 'https://github.com/GSLabsRepos/Online-shopping-site-jenkins.git'
-    // }
+    stage('SCM Checkout')
+    {
+        git branch: 'main', credentialsId: '3452a1d3-41e2-4577-86bb-4f2b097b6bdb', url: 'https://github.com/GSLabsRepos/Online-shopping-site-jenkins.git'
+    }
     
     stage('Run Docker Compose File')
     {
