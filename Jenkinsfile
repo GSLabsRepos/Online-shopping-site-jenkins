@@ -24,24 +24,24 @@ pipeline{
 
                steps{
                    sh 'pwd'
-                   sh 'docker-compose build .'
-                   sh 'docker-compose up -d'
+                   sh 'sudo chown root:jenkins docker-compose build .'
+                   sh 'sudo chown root:jenkins docker-compose up -d'
                }
                
             }
-          stage('PUSH image to Docker Hub')
-            {
+          // stage('PUSH image to Docker Hub')
+          //   {
              
 
-              steps{
-                  sh 'docker login -u "rohitnaikade264" -p "Ro-Hitman.45" docker.io'
+          //     steps{
+          //         sh 'docker login -u "rohitnaikade264" -p "Ro-Hitman.45" docker.io'
 
-                  sh 'docker push rohitnaikade264/onlineShop'
-              }
+          //         sh 'docker push rohitnaikade264/onlineShop'
+          //     }
               
             
           
-            }
+          //   }
     }
     
 }
