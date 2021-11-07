@@ -22,8 +22,8 @@ pipeline{
            {
 
                steps{
-                   sh 'pwd'
-                   sh 'docker-compose build .'
+                  
+                   sh 'docker-compose build'
                    sh 'docker-compose up -d'
                }
                
